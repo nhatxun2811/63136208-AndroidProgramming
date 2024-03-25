@@ -55,6 +55,7 @@ public class LoginID extends javax.swing.JFrame {
         txtAcc.setToolTipText("");
         txtAcc.setName(""); // NOI18N
 
+        btnLogin.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.darkShadow"));
         btnLogin.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
         btnLogin.setText("Đăng nhập");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -132,7 +133,7 @@ public class LoginID extends javax.swing.JFrame {
                     return;
                 }
 		if(str_Ten.equals("admin@gmail.com") && str_MK.equals("63136208")) {
-			JOptionPane.showMessageDialog(this, "Đăng nhập thành công");
+			JOptionPane.showMessageDialog(this, "Đăng nhập thành công!");
 			ShowID showID = new ShowID();
 			showID.setVisible(true);
 			//Ẩn form đăng nhập

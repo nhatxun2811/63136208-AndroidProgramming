@@ -4,6 +4,8 @@
  */
 package ntu_63136208;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ADMIN
@@ -127,6 +129,7 @@ public class ShowID extends javax.swing.JFrame {
             }
         });
 
+        btnLogout.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.darkShadow"));
         btnLogout.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
         btnLogout.setText("Đăng xuất");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -226,6 +229,7 @@ public class ShowID extends javax.swing.JFrame {
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
 
+	JOptionPane.showMessageDialog(this, "Đăng xuất thành công!");
 	LoginID loginID = new LoginID();
         loginID.setVisible(true);
 	//Ẩn form đăng nhập
