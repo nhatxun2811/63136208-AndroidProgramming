@@ -10,13 +10,14 @@
 
     <EditText
         android:id="@+id/note_input"
-        android:layout_width="352dp"
-        android:layout_height="57dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:fontFamily="monospace"
+        android:hint="Viết note tại đây"
         android:inputType="text"
         android:textColor="@color/black"
-        android:textSize="35dp"
+        android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/btnDel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

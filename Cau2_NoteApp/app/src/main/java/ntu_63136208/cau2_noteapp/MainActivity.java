@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText noteInput;
     Button addButton;
+    Button deleteButton;
     TextView noteDisplay;
     ArrayList<String> notes;
     @Override
@@ -22,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         noteInput = findViewById(R.id.note_input);
-        addButton = findViewById(R.id.btnDel);
+        addButton = findViewById(R.id.btnAdd);
+        deleteButton = findViewById(R.id.btnDel);
         noteDisplay = findViewById(R.id.note_display);
         notes = new ArrayList<>();
 
@@ -30,9 +32,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String note = noteInput.getText().toString();
-                notes.add(note);
-                displayNotes();
-                noteInput.setText("");
+                if(!note.isEmpty()){
+                    notes.add(note);
+                    displayNotes();
+                    noteInput.setText("");
+                }
+            }
+        });
+        deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int lastIndex = notes.size() - 1;
+                if (lastIndex >= 0) {
+                    notes.remove(lastIndex);
+                    displayNotes();
+                }
             }
         });
     }
