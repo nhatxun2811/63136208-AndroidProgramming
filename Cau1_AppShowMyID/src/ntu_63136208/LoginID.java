@@ -4,6 +4,8 @@
  */
 package ntu_63136208;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ADMIN
@@ -26,57 +28,136 @@ public class LoginID extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        txtAcc = new javax.swing.JTextField();
+        btnLogin = new javax.swing.JButton();
+        txtPW = new javax.swing.JPasswordField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Show ID App");
+        setBackground(java.awt.SystemColor.activeCaption);
+
+        jLabel1.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("ĐĂNG NHẬP HỆ THỐNG");
+
+        jLabel2.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        jLabel2.setText("Email:");
+
+        jLabel3.setFont(new java.awt.Font("Monospaced", 1, 18)); // NOI18N
+        jLabel3.setText("Mật khẩu:");
+
+        txtAcc.setBackground(new java.awt.Color(204, 204, 204));
+        txtAcc.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
+        txtAcc.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtAcc.setToolTipText("");
+        txtAcc.setName(""); // NOI18N
+
+        btnLogin.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
+        btnLogin.setText("Đăng nhập");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
+
+        txtPW.setBackground(new java.awt.Color(204, 204, 204));
+        txtPW.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
+        txtPW.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnLogin)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtAcc, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                                .addComponent(txtPW)))))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(49, 49, 49)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtPW, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        // TODO add your handling code here:
+        Login();
+    }//GEN-LAST:event_btnLoginActionPerformed
+
+    
+    void Login() {
+		//Lấy về tên đăng nhập và MK
+		String str_Ten = txtAcc.getText();
+		String str_MK = new String(txtPW.getPassword());
+		
+                StringBuilder sb = new StringBuilder();
+                
+                if(str_Ten.equals(""))
+                    sb.append("Email trống!!\n");
+                if(str_MK.equals(""))
+                    sb.append("Mật khẩu trống!!\n");
+                if(sb.length() > 0){
+                    JOptionPane.showMessageDialog(this, sb.toString(), "Lỗi đăng nhập!", JOptionPane.ERROR_MESSAGE);
+                    return;
                 }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LoginID.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LoginID.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LoginID.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LoginID.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new LoginID().setVisible(true);
-            }
-        });
-    }
-
+		if(str_Ten.equals("admin@gmail.com") && str_MK.equals("63136208")) {
+			JOptionPane.showMessageDialog(this, "Đăng nhập thành công");
+			ShowID showID = new ShowID();
+			showID.setVisible(true);
+			//Ẩn form đăng nhập
+			this.setVisible(false);
+		}
+		else if(!str_Ten.equals("admin@gmail.com")){
+			//Xóa dữ liệu nhập
+			txtAcc.setText("");
+			JOptionPane.showMessageDialog(this, "Đăng nhập thất bại! Sai Email");
+		}
+                
+		else {
+			//Xóa dữ liệu nhập
+			txtPW.setText("");
+			JOptionPane.showMessageDialog(this, "Đăng nhập thất bại! Sai mật khẩu");
+		}
+                
+	}
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnLogin;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField txtAcc;
+    private javax.swing.JPasswordField txtPW;
     // End of variables declaration//GEN-END:variables
 }
