@@ -26,16 +26,18 @@
 
     <Button
         android:id="@+id/btnAdd"
-        android:layout_width="109dp"
-        android:layout_height="54dp"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
         android:layout_marginStart="50dp"
         android:layout_marginBottom="20dp"
+        android:background="@drawable/ic_bgr"
+        android:drawableLeft="@android:drawable/ic_menu_add"
         android:fontFamily="monospace"
         android:onClick="AddNotes"
+        android:padding="5dp"
         android:text="Thêm"
         android:textColor="@color/white"
         android:textSize="20dp"
-        android:background="@drawable/ic_bgr"
 
         app:layout_constraintBottom_toTopOf="@+id/note_display"
         app:layout_constraintEnd_toStartOf="@+id/btnDel"
@@ -44,18 +46,19 @@
 
     <Button
         android:id="@+id/btnDel"
-        android:layout_width="109dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/del_ic_bgr"
+        android:drawableLeft="@android:drawable/ic_delete"
         android:fontFamily="monospace"
         android:onClick="DelNotes"
         android:text="Xóa"
         android:textColor="@color/white"
         android:textSize="20dp"
-        android:background="@drawable/del_ic_bgr"
         app:layout_constraintBottom_toTopOf="@+id/note_display"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.824"
+        app:layout_constraintHorizontal_bias="0.842"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
