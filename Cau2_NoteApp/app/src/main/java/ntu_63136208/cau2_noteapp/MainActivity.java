@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private void displayNotes() {
         StringBuilder stringBuilder = new StringBuilder();
         for (String note : notes) {
-            stringBuilder.append(note).append("\n");
+            stringBuilder.append(note).append("\n").append("-------------------");
         }
         noteDisplay.setText(stringBuilder.toString());
     }
