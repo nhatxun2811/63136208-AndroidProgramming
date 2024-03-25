@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         noteInput = findViewById(R.id.note_input);
-        addButton = findViewById(R.id.btnAdd);
+        addButton = findViewById(R.id.btnDel);
         noteDisplay = findViewById(R.id.note_display);
         notes = new ArrayList<>();
 
