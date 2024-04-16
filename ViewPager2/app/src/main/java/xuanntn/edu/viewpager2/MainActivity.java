@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         dsDuLieu.add(new LandScape("vinwonder", "VinWonder Phú Quốc"));
         dsDuLieu.add(new LandScape("thaphanoi", "Cột cờ Hà Nội"));
         dsDuLieu.add(new LandScape("effel", "Tháp Effel"));
+        dsDuLieu.add(new LandScape("buckingham", "BuckingHam"));
         return dsDuLieu;
     }
 }
