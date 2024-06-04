@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Câu 1"
+        android:icon="@drawable/bx_home"
+        android:id="@+id/ques1"/>
+    <item
+        android:title="Câu 2"
+        android:icon="@drawable/bx_calculator"
+        android:id="@+id/ques2"/>
+    <item
+        android:title="Câu 3"
+        android:icon="@drawable/bx_buildings"
+        android:id="@+id/ques3"/>
+    <item
+        android:title="Câu 4"
+        android:icon="@drawable/bx_notepad"
+        android:id="@+id/ques4"/>
+    <item
+        android:title="Câu 5"
+        android:icon="@drawable/bx_user"
+        android:id="@+id/ques5"/>
+</menu>
